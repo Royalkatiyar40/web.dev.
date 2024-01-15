@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <h1>Form For Apply In Anshu - TA</h1>
+   <form action="post"></form>
+   <div>
+        <label for="username">Enter Your Username :</label>
+        <input type="text" id="username" name="username" placeholder="Enter Your Username" autofocus>
+    </div>
+    <div>
+        <label for="Name">Name :</label>
+        <input type="text" id="Name" name="Name" placeholder="Name">
+    </div>
+    <div>
+        <label for="surname">surname :</label>
+        <input type="text" id="surname" name="surname" placeholder="surname">
+    </div>
+    <div>
+        <label for="pattern">pattern</label>
+        <input type="text" id="pattern" pattern="ax12-bx16" placeholder="ax12-bx16" required autofocus>
+    </div>
+    <div>
+        <label for="email">Email Address :</label>
+        <input type="email" id="email" name="email" placeholder="Enter Your E-mail Address" required>
+    </div>
+    
+    <div>
+        <label for="username">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="Female" name="gender" value="Female">
+        <label for="Female">Female</label>
+    </div>
+    <div>
+        <select name="caste" required>
+            <option value="Select One">Select One</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="Miniority">Miniority</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox" id="bike" name="bike" value="bike" >
+        <label for="bike" > Bike </label>
+        
+    </div>
+
+    <div1>
+        <label for="Comment">Enter Your Comment Here</label><br>
+          <textarea id="Comment" name="Comment" rows="4" cols="50"> 
+          
+          </textarea>
+    </div1>
+    <br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

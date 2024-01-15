@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIUI Calculator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #calculator {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+        }
+        #display {
+            font-size: 1.5em;
+            padding: 10px;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+        }
+        #buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        button {
+            font-size: 1.2em;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #eee;
+        }
+        button.operator {
+            background-color: #fda857;
+            color: #fff;
+        }
+        button.double {
+            grid-column: span 2;
+        }
+        button.clear {
+            background-color: #e84f4f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display"></div>
+        <div id="buttons">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">-</button>
+            <button class="double">0</button>
+            <button>.</button>
+            <button class="operator">=</button>
+            <button class="operator">+</button>
+            <button class="clear double">C</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        const buttons = document.getElementById('buttons');
+
+        buttons.addEventListener('click', function(event) {
+            if (event.target.tagName === 'BUTTON') {
+                handleButtonClick(event.target.textContent);
+            }
+        });
+
+        let currentInput = '';
+        let previousInput = '';
+        let operator = '';
+
+        function handleButtonClick(value) {
+            if (value >= '0' && value <= '9') {
+                currentInput += value;
+            } else if (value === '.') {
+                if (!currentInput.includes('.')) {
+                    currentInput += value;
+                }
+            } else if (value === 'C') {
+                clearCalculator();
+            } else if (value === '=') {
+                calculateResult();
+            } else {
+                handleOperator(value);
+            }
+
+            updateDisplay();
+        }
+
+        function clearCalculator() {
+            currentInput = '';
+            previousInput = '';
+            operator = '';
+        }
+
+        function handleOperator(value) {
+            if (currentInput !== '') {
+                if (previousInput !== '') {
+                    calculateResult();
+                }
+                previousInput = currentInput;
+                currentInput = '';
+                operator = value;
+            } else if (previousInput !== '') {
+                operator = value;
+            }
+        }
+
+        function calculateResult() {
+            if (currentInput !== '' && previousInput !== '') {
+                const num1 = parseFloat(previousInput);
+                const num2 = parseFloat(currentInput);
+
+                switch (operator) {
+                    case '+':
+                        currentInput = (num1 + num2).toString();
+                        break;
+                    case '-':
+                        currentInput = (num1 - num2).toString();
+                        break;
+                    case '*':
+                        currentInput = (num1 * num2).toString();
+                        break;
+                    case '/':
+                        if (num2 !== 0) {
+                            currentInput = (num1 / num2).toString();
+                        } else {
+                            currentInput = 'Error';
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
+                previousInput = '';
+                operator = '';
+            }
+        }
+
+        function updateDisplay() {
+            display.textContent = currentInput || '0';
+        }
+    </script>
+</body>
+</html>

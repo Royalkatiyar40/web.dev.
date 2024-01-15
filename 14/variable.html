@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <style>
+        :root{
+            --color: blue;
+            --secolor: rgba(216, 203, 18, 0.816);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .nav{
+        background-color: var(--color);
+       }
+       ul li{
+        list-style: none;
+        padding: 5px;
+        margin: 2px;
+       }
+       ul{
+        display: flex;
+       }
+       ul li :first-child{
+        color: aqua;
+        padding: 4px;
+       }
+       .con{
+        background-color: var(--secolor);
+       }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="con">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, mollitia, numquam magni harum quis corrupti, sint debitis incidunt adipisci odit facilis porro praesentium exercitationem? Cupiditate mollitia nemo beatae, molestiae deserunt officiis neque dolores in.
+    </div>
+</body>
+</html>

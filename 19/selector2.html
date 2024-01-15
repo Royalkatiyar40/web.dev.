@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTOR</title>
+</head>
+<style>
+    /* .box:first-child{ */
+    /* background-color: red; */
+    /* } */
+
+    /* .box::first-line{
+        color: rgb(252, 4, 132);
+    } */
+
+    .boxes * {
+        color: blue;
+        border: 2px solid black;
+
+    }
+
+    /* [data-color="primary"]{
+        margin-top: 45px;
+        padding-top: 45px;
+    } */
+    /* p, a, .box [data-color="primary"]{
+        padding-top: 45px;
+    }
+    .box:nth-child(even){
+        background-color: blueviolet;
+    } */
+    .box:last-child {
+        background-color: rgb(180, 25, 115);
+    }
+
+    .boxes::before {
+        content: "Ansh IS good";
+    }
+
+    .boxes::after {
+        margin: 20px;
+        padding: 5px;
+        color: white;
+        border: 2px solid rgb(12, 225, 12);
+        border-radius: 3vw;
+
+        background-color: rgb(24, 179, 24);
+        content: "Ansh IS good";
+    }
+    ::selection{
+        color: aqua;
+        background-color: black;
+    }
+    .box::first-letter{
+        color: palevioletred;
+        background-color: aquamarine;
+        font-weight: bolder;
+    }
+    input::placeholder{
+        margin: 0;
+        padding: 0;
+        color: blueviolet;
+        background-color: bisque;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <input type="text" placeholder="Type Your Name">
+    <div class="boxes">
+        <div class="box" data-color="primary">
+            Lorem ipsum dolor sit.
+        </div>
+        <!-- <div class="box">
+            Heyy I Am A Box Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dignissimos voluptatem praesentium ad temporibus nemo laborum odit earum omnis illum, minus eveniet tempora fugit quia eius veniam eligendi quam aperiam voluptatibus? Eligendi numquam nesciunt a dolor vel sequi natus ad explicabo repellat ullam? Cum, perferendis? Architecto quos sed ducimus doloremque. Officia est necessitatibus reprehenderit nobis similique eos laudantium modi, amet placeat deleniti. Quo cumque voluptatem sequi ipsa soluta autem nobis tempora quaerat ipsam! Veritatis provident mollitia officia. Vel id aliquam numquam, mollitia dicta expedita pariatur. Dolore dolorum suscipit doloremque, eum enim voluptatem possimus aspernatur sunt quaerat sapiente itaque provident illum quasi dolores incidunt et at inventore error perferendis reprehenderit quo beatae odio animi? Praesentium illum corrupti aut minima accusamus aspernatur repudiandae sequi iusto veritatis quaerat ab cumque saepe alias pariatur magnam, consectetur est sapiente sunt debitis officiis sed neque. Distinctio autem recusandae eos enim error neque veritatis nobis atque rerum impedit omnis ratione, a illum, nemo doloremque illo quasi sunt corrupti consequatur deserunt aspernatur. Animi illo, voluptatum recusandae aliquid sit amet asperiores consectetur possimus laborum consequatur debitis perspiciatis, saepe ut reiciendis distinctio quia dolore blanditiis molestiae dicta. Illo corporis quo, corrupti, expedita odio totam deleniti vero, provident suscipit dignissimos dolorum ut culpa facere beatae quibusdam cum repellat ducimus libero repudiandae accusantium. Dolore asperiores voluptatem unde rerum ratione. Aspernatur iste voluptatum nisi, quibusdam pariatur, enim neque eligendi eos fugit ea iusto ducimus magnam rem beatae repellendus nesciunt deserunt architecto quisquam? Corrupti aliquid soluta fugit tempore nisi voluptatem autem nihil, incidunt similique ipsa eum quasi saepe distinctio nostrum modi consequuntur veniam numquam! Voluptatibus ducimus autem molestias iure ad ab aliquid, rerum tenetur unde pariatur inventore? Minus quo laboriosam aperiam delectus repellendus dolor, voluptatum, culpa consectetur odio quisquam quod unde quos nam. Nisi ducimus quo magnam blanditiis praesentium sapiente. At illo architecto veritatis exercitationem dolorem adipisci velit iste impedit itaque commodi ea sequi, minus praesentium consequuntur doloremque eum. Odio similique adipisci necessitatibus, laboriosam ipsum molestias placeat fugit voluptatibus magnam autem reprehenderit tenetur, ad dolor nemo accusamus est aliquam, exercitationem minima aspernatur mollitia nobis illum accusantium? Maiores molestias explicabo eaque quis inventore deleniti quod praesentium porro, ea nulla velit repellat sunt, quos at veniam alias sapiente placeat accusamus, et quasi. Sit nihil excepturi quidem nisi quae cum aliquid, officiis hic reprehenderit qui possimus similique ipsam sint laudantium doloribus eos doloremque cumque error quasi deleniti consequuntur! Eius ex voluptatibus odio quae hic veniam expedita officiis rem dicta neque repellendus adipisci odit alias amet quod tenetur, deserunt aliquid? Voluptates eaque id hic fugit deserunt iusto voluptatum unde placeat corrupti, nostrum facilis praesentium impedit voluptatibus delectus ab dolorem optio excepturi. Vero eius ipsam nesciunt, accusantium esse ipsum odio? Recusandae accusamus cupiditate eius?
+        </div> -->
+        <div class="box">
+            Heyy I Am A Box
+        </div>
+        <div class="box">
+            Heyy I Am A Box
+        </div>
+    </div>
+</body>
+
+</html>

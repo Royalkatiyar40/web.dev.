@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+<style>
+    main{
+        background-color: black;
+        color: white;
+        padding: 34px;
+    }
+    header{
+        position: sticky;
+        top: 0;
+    }
+    nav{
+        background-color: pink;
+        height: 83px;
+        position: sticky;
+        top: 0;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .con{
+        background-color: green;
+        margin: 12px 34px;
+        display: flex;
+        padding: 53px 23px;
+        text-align: center;
+        /* height: 233px; */
+    }
+    
+    .box1{
+        background-color: pink;
+        height: 70vh;
+        width: 45%;
+        margin: 0 20px;
+    }
+    .box2{
+       background-color: blue;
+       height: 70vh;
+       width: 45%;
+       margin: 0 20px;
+    }
+    .ox{
+        height: 32px;
+        width: 32px;
+        background-color: orange;
+        position: fixed;
+        bottom: 12px;
+        right: 23px;
+        border-radius: 60px;
+        cursor: pointer;
+    }
+    footer{
+        height: 100px;
+        background-color: bisque;
+    }
+    .textbox{
+        padding: 34px;
+        border: 2px solid white;
+        margin: 50px 34vw;
+        border-radius: 13px;
+        font-size: 2em;
+    }
+    
+</style>
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+
+    <main>
+      <div class="con">
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </div>
+      <div class="textbox">welcome to sigma web dev Express</div>
+      <div class="ox"></div>
+
+      </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOAT & CLEAR</title>
+</head>
+<style>
+    .cards{
+        border: 2px solid black;
+        display: flow-root;
+    }
+    img{
+        float: left;
+        /* float: right; */
+    }
+
+    .card{
+        border: 2px solid red;
+    }
+    .card:nth-child(3){
+        background-color: aqua;
+        /* clear: right; */
+        /* clear: both; */
+        clear: left;
+    }
+</style>
+<body>
+    <div class="cards">
+        <img src="WIN_20240106_10_05_14_Pro.jpg" alt="" width="285">
+        <div class="card"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas vero voluptatibus impedit! Blanditiis earum officia beatae eum eos quas itaque cuccusantium. Recusandae libero beatae doloremque.</p></div>
+
+        <div class="card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex sint amet eligendi quo quos nobis quibusdam consequuntur aperiam aliquam molestias deserunt error eum quae doloremque itaque ipsa voluptatibus harum labore neque animi totam quam, a at doloribus? Omnis sed rem qui veniam blanditiis amet molestias deleniti laborum facere earum voluptatum vero libero eos id fugiat, quas, cumque hic? Velit dolor voluptate, illum eaque in voluptas esse facilis, molestias sapiente eveniet fugit quisquam iure debitis ipsum sed nesciunt omnis ipsam officiis eos aperiam voluptatem! Possimus, perferendis at rem debitis dolorem corporis, quibusdam corrupti sit sint assumenda itaque voluptates natus necessitatibus cumque eveniet officiis aspernatur ratione iusto, et non inventore ullam hic quia? Non perspiciatis nihil sed obcaecati voluptatum voluptatem quisquam, autem aliquid delectus soluta magni commodi dicta expedita! Quaerat omnis cumque ipsam excepturi quisquam libero totam perferendis molestiae assumenda, impedit dicta earum esse, incidunt deserunt sed doloribus! Aliquid nesciunt officia minus reiciendis aut ducimus vero labore nostrum, alias sit maxime id qui dicta autem sed a, facilis facere eum fugiat enim! Aspernatur ducimus libero dolorum consequatur voluptates nostrum eveniet saepe alias temporibus, autem at hic aut quasi, doloremque harum enim aperiam veniam expedita, cum illo unde odit! Doloribus, debitis totam repudiandae eum molestiae, provident accusamus amet delectus deserunt mollitia voluptates eius atque perspiciatis impedit omnis ipsum ullam magnam autem aut labore accusantium. Impedit consectetur esse quos pariatur? Optio voluptatum alias dolor blanditiis aspernatur dignissimos.</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>

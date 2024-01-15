@@ -1,0 +1,31 @@
+body{
+    background-color: aquamarine;
+}
+
+div{
+   font: 0.9em sans-serif;
+   font-size: medium;
+   font-style: initial;
+   padding-left: 7px;
+   padding-bottom: 12px;
+}
+h1{
+    color: blue;
+    padding: 100px;
+
+}
+::placeholder{
+    color: blueviolet;
+    padding-left: 4px;
+    padding: auto;
+}
+textarea{
+    color: skyblue;
+    background-color: aquamarine;
+}
+button{
+    color: red;
+}
+option{
+    color: salmon;
+}
